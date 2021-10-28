@@ -1,15 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
 import Greeter from './components/Greeter';
-
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Home from "./components/Home"
+import About from './components/About';
+import Project from './components/Project';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Greeter />
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <header className="App-header">
+          <Switch>
+            <Route path="/home">
+              <Home />
+            </Route>
+          </Switch>
+        </header>
+      </div>
+    </Router>
   );
 }
 
