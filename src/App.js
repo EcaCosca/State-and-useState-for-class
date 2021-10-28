@@ -16,6 +16,12 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
+            <Route exact path="/p">
+              <About />
+            </Route>
+            <Route path="/project">
+              <Project />
+            </Route>
           </Switch>
         </header>
       </div>
